@@ -6,4 +6,5 @@ import com.mwcc.mwccmoney.api.model.Pessoa;
 
 public interface PessoaRepository extends JpaRepository<Pessoa, Long>{
 
+	public Pessoa findByCodigo(Long cogido);
 }
