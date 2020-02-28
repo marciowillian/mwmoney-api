@@ -43,7 +43,7 @@ public class Lancamento {
 	@JoinColumn(name = "codigo_categoria")
 	private Categoria categoria;
 	
-	@ManyToOne
+	@ManyToOne @NotNull
 	@JoinColumn(name = "codigo_pessoa")
 	private Pessoa pessoa;
 
