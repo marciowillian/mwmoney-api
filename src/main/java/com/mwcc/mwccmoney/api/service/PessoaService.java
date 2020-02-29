@@ -13,7 +13,7 @@ public class PessoaService {
 	
 	@Autowired
 	private PessoaRepository pessoaRepository;
-
+	
 	public Pessoa atualizar(Long codigo, Pessoa pessoa) {
 		Pessoa pessoaSalva = buscarPessoaSalva(codigo);
 		BeanUtils.copyProperties(pessoa, pessoaSalva, "codigo");
@@ -28,7 +28,7 @@ public class PessoaService {
 		pessoaRepository.save(pessoaSalva);
 	}
 	
-	private Pessoa buscarPessoaSalva(Long codigo) {
+	public Pessoa buscarPessoaSalva(Long codigo) {
 		Pessoa pessoaSalva = pessoaRepository.findByCodigo(codigo);
 		if(pessoaSalva == null){
 			 throw new EmptyResultDataAccessException(1);
