@@ -25,6 +25,7 @@ import com.mwcc.mwccmoney.api.event.RecursoCriadoEvent;
 import com.mwcc.mwccmoney.api.exceptionhandler.MwmoneyExceptionHandler.Erro;
 import com.mwcc.mwccmoney.api.model.Lancamento;
 import com.mwcc.mwccmoney.api.repository.LancamentoRepository;
+import com.mwcc.mwccmoney.api.repository.filter.LancamentoFilter;
 import com.mwcc.mwccmoney.api.service.LancamentoService;
 import com.mwcc.mwccmoney.api.service.exception.PessoaInexistenteOuInativaException;
 
@@ -45,8 +46,8 @@ public class LancamentoResource {
 	private MessageSource messageSource;
 
 	@GetMapping
-	public List<Lancamento> findAll(){
-		return lancamentoRepository.findAll();
+	public List<Lancamento> pesquisar(LancamentoFilter lancamentoFilter){
+		return lancamentoRepository.filtrar(lancamentoFilter);
 	}
 	
 	@GetMapping("/{codigo}")

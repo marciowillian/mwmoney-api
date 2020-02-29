@@ -2,7 +2,6 @@ package com.mwcc.mwccmoney.api.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.mwcc.mwccmoney.api.model.Lancamento;
 import com.mwcc.mwccmoney.api.model.Pessoa;
 import com.mwcc.mwccmoney.api.repository.LancamentoRepository;
