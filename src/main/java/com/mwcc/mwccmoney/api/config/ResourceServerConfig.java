@@ -27,7 +27,6 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter{
 		.antMatchers("/categorias").permitAll()
 		.anyRequest().authenticated()
 		.and()
-		.httpBasic().and()
 		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 		.csrf().disable();
 		
@@ -37,5 +36,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter{
 	public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
 		resources.stateless(true);
 	}
+	
+	
 	
 }
