@@ -21,7 +21,7 @@ public class RefreshTokenPostProcessor implements ResponseBodyAdvice<OAuth2Acces
 
 	@Override
 	public boolean supports(MethodParameter returnType, Class<? extends HttpMessageConverter<?>> converterType) {
-		return returnType.getMethod().getName().equals("postAccesToken");
+		return returnType.getMethod().getName().equals("postAccessToken");
 	}
 
 	@Override
